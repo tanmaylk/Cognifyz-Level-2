@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Grid Layout</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f1f1f1;
+      margin: 0;
+      padding: 0;
+    }
+
+    .grid-container {
+      padding: 20px;
+    }
+
+    .grid-item {
+      padding: 10px;
+      border: 1px solid #000;
+      border-radius: 0px;
+      background-color: transparent;
+      transition: transform 0.3s ease;
+      margin: 10px;
+      padding-left: 1rem;
+    }
+
+    .grid-item:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container grid-container">
+    <div class="row justify-content-center">
+      <div class="col-md-4 grid-item text-center">
+        <h2>Level-2, Task- 1 (1)</h2>
+        <p>Use a front-end framework like Bulma
+or UIKit to create a responsive card
+component with an image and text..</p>
+      </div>
+      <div class="col-md-4 grid-item text-center">
+        <h2>Level-2, Task-1 (2)</h2>
+        <p>Implement a basic responsive grid
+layout using a front-end framework
+like Bootstrap or Foundation.</p>
+      </div>
+      <div class="col-md-4 grid-item text-center">
+        <h2>Successfully Completed Level-2, Task-1</h2>
+        
+      </div>
+    </div>
+  </div>
+</body>
+</html>

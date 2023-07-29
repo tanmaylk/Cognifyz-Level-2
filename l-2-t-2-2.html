@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile-Friendly Navigation Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+    }
+
+    .navbar {
+      background-color: transparent;
+      padding: 20px;
+      border: 1px solid #000;
+      border-radius: 60px;
+      margin-top: 16px;
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+    }
+
+    .navbar-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .nav-link {
+      margin-left: 20px;
+      font-size: 18px;
+    }
+
+    .hamburger-menu {
+      display: none;
+      cursor: pointer;
+      font-size: 24px;
+    }
+
+    /* Media query for smaller screens */
+    @media (max-width: 767px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #f1f1f1;
+        z-index: 1;
+        padding: 20px;
+        border-radius: 0px;
+        border: 1px solid #000; 
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .hamburger-menu {
+        display: block;
+      }
+
+      .nav-link {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-menu">
+      <div class="navbar-brand">Mobile Menu</div>
+      <div class="hamburger-menu">&#9776;</div>
+      <ul class="nav-links">
+        <li class="nav-link">Level-1-Task-2</li>
+        <li class="nav-link">Level-2-Task-2</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // Toggle the navigation menu on hamburger menu click
+    const hamburgerMenu = document.querySelector(".hamburger-menu");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburgerMenu.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  </script>
+</body>
+</html>
